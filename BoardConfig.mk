@@ -1,10 +1,3 @@
-#
-# Copyright (C) 2024 The Android Open Source Project
-# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 DEVICE_PATH := device/samsung/a24
 
 # For building with minimal manifest
@@ -103,7 +96,18 @@ PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_RECOVERY_NAME := "TWRP_a24"
+TW_NO_REBOOT_BOOTLOADER := true
+TWRP_INCLUDE_LOGCAT := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_NO_SCREEN_TIMEOUT := true
+TW_EXCLUDE_MTP := false
 TW_USE_TOOLBOX := true
+TW_EXCLUDE_SUPERSU := true
+TW_INCLUDE_INJECTTWRP := true
+TW_NEVER_UNMOUNT_SYSTEM := true
+TW_INCLUDE_FB2PNG := true
+TW_INCLUDE_CRYPTO := true
+TARGET_USERIMAGES_USE_F2FS := true
+TW_DEFAULT_LANGUAGE := es
+TARGET_RECOVERY_DEVICE_DIRS += device/samsung/a24
