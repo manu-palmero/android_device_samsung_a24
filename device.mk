@@ -2,11 +2,21 @@ LOCAL_PATH := device/samsung/a24
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PLATFORM := mt6789
+
+# Fastbootd stuff
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mtk \
+    android.hardware.fastboot@1.0-impl-mtk.recovery \
     fastbootd
 
-# PRODUCT_SHIPPING_API_LEVEL := 33
+# health Hal
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1 \
+    android.hardware.health@2.1-service-samsung \
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
