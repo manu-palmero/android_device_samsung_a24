@@ -72,7 +72,6 @@ BOARD_SAMSUNG_DYNAMIC_PARTITIONSCD_SIZE := 11744051200
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6789.rc
 
 # Platform
